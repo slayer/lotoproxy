@@ -16,8 +16,6 @@ USAGE
 
         lotoproxy.rb [listen_ip]:listen_port connect_to_ip:connect_to_port
 
-QUICK START
-===========
 
 Simple test case
 ----------------
