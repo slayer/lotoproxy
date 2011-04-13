@@ -36,7 +36,7 @@ Simple test case
 
 3. Run proxy
 
-       ruby lotoproxy.rb 127.0.0.1:2222 127.0.0.1:1111
+        ruby lotoproxy.rb 127.0.0.1:2222 127.0.0.1:1111
 
 5. Enjoy
 
