@@ -3,6 +3,7 @@
 require 'rubygems'
 require 'logger'
 require 'eventmachine'
+require 'socket'
 
 LOGGER = Logger.new STDERR
 LOGGER.level = Logger::DEBUG
@@ -41,7 +42,6 @@ class LotoProxy
   class ServerConnection < EM::Connection
 
     def post_init
-      LOGGER.debug "[client]: connected to server"
       $server = self
     end
 
