@@ -2,9 +2,9 @@ SUMMARY
 =======
 
 LotoProxy is a simple TCP multiplexing proxy for Loto.
-It connects with single connection to server and waits clients.
-Data received from client transfered to server without any modification.
-Data received from server broadcasted to all clients.
+It connects with single connection to server and waits for clients.
+Data received from a client is transfered to server without any modification.
+Data received from a server is broadcasted to all clients.
 
 ## Requirements
 * Ruby (any version)
