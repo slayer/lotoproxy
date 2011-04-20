@@ -41,6 +41,10 @@ class LotoProxy
   # Client: Connection to Main LotoServer
   class ServerConnection < EM::Connection
 
+    def connection_completed
+      LOGGER.info "[client]: connected to server"
+    end
+
     def post_init
       $server = self
     end
@@ -54,6 +58,12 @@ class LotoProxy
       LOGGER.debug "[client]: sending to server '#{data}'"
       send_data data
     end
+
+    def unbind
+      LOGGER.info "[client]: server disconnected"
+      exit 1
+    end
+
   end
 
   # Start Reactor!
@@ -97,6 +107,7 @@ class LotoProxy
       rescue
         LOGGER.error $!.message
         LOGGER.error "\t" + $!.backtrace.join("\n\t")
+        exit 1
       end
     end
 
